@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+  --emphasis-color: #B52184;
+  --primary-color: #312D64;
+  --background-color: #F9F4FB;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.page {
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero figure {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.hero img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--emphasis-color);
+  margin-top: 1.7rem;
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 200ms both;
+}
+
+.explore-more {
+  font-size: 6rem;
+  color: var(--emphasis-color);
+  background-color: var(--background-color);
+  border: 4px solid var(--emphasis-color);
+  border-radius: 76rem;
+  padding: 2rem 1.4rem;
+  margin-top: 3.5rem;
+}
+
+.arrow-explore {
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.cards {
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  padding: 5.2rem 4rem;
+  margin-top: 9.3rem
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2.6rem;
+}
+
+.card h2 {
+  font-size: 2.9rem;
+  font-weight: 900;
+  color: var(--emphasis-color);
+  margin-top: 3.3rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 2rem;
+}
+
+.contact {
+  margin-top: 7.8rem;
+}
+
+.contact h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--emphasis-color);
+  padding-left: 4rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 4rem;
+}
+
+.input-wrapper input, .input-wrapper textarea {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.6rem 1.6rem 1.6rem 5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: 'Mulish', sans-serif;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 1.6rem;
+  background-color: var(--background-color);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper textarea {
+  padding: 1.6rem;
+}
+
+
+
+form input:focus::placeholder, form textarea:focus::placeholder {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+textarea {
+  height: 16rem;
+  resize: none;
+}
+
+#name {
+  background: url(./img/person.svg) no-repeat scroll 1.4rem;
+}
+
+#email {
+  background: url(./img/at.svg) no-repeat scroll 1.4rem 1.6rem;
+}
+
+footer {
+  font-size: 1.9rem;
+  text-align: center;
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  color: #fff;
+  padding: 1.6rem;
+}
+
+input[type=submit] {
+  align-self: start;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.2rem 1.6rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: transalte(0);
+  }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px) translateY(50px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY();
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-25%)
+
+  }
+  100% {
+    transform: translateY(25%);
+
+  }
+}
+
+@media (min-width: 900px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  header p {
+    font-size: 2.8rem;
+  }
+
+  .card h2 {
+    font-size: 3rem;
+  }
+
+  .card p {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .contact h2 {
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse; 
+    gap: 2.8rem;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hero figure {
+    width: 50%;
+  }
+
+  .hero header {
+    padding-left: 4rem;
+  }
+
+  .explore-more {
+    position: absolute;
+    left: 10rem;
+    bottom: 0px;
+  }
+
+  .hero header {
+    align-self: center;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 9.2rem;
+    margin: 0;
+    background: url(./img/stars.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    
+  }
+
+  .contact form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-wrapper {
+    width: 50%;
+    align-self: center;
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .hero {
+    justify-content: space-evenly;
+   
+  }
+
+  .hero header {
+   justify-items: start;
+  }
+
+  .hero figure {
+    width: 40%;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 5.2rem;
+  }
+
+  header p {
+    font-size: 3.2rem;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 500px;
+  }
+
+  .card h2 {
+    font-size: 3.5rem;
+  }
+
+  .card p {
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  .contact {
+    gap: 15%;
+  }
+
+  .contact h2 {
+    font-size: 4.2rem;
+  }
+}
+
+@media (min-width: 1500px) {
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .explore-more {
+    left: 30rem;
+  }
+}
+
+
+
+
+
